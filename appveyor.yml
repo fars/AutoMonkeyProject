@@ -17,14 +17,9 @@ build:
 before_test:
   - echo ========= Runing unit tests ===============
 
+# to run tests again only selected assemblies and/or categories
 test:
   assemblies:
-  - '**\*Test.dll'
-
-test_script:
-- cmd: >-
-    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AMCanUsbLibTest\bin\Debug\AMCanUsbLibTest.dll
-    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AMLinLibTest\bin\Debug\AMLinLibTest.dll
-    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AMLogEngineLibTest\bin\Debug\AMLogEngineLibTest.dll
-    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AutoMonkeyTest\bin\Debug\AutoMonkeyTest.dll
+    only:
+      - '**\*Test.dll'
     

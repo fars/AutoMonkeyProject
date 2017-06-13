@@ -20,7 +20,6 @@ before_test:
 
 test:
   assemblies:
-  only:
   - '**\*Test.dll'
 
 test_script:

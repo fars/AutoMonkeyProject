@@ -6,8 +6,6 @@ branches:
   only:
     - master
 
-configuration: Release
-platform: x64
 build:
   project: ./Sources/AutoMonkey/AutoMonkey.sln
   verbosity: minimal

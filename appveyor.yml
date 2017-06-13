@@ -6,7 +6,8 @@ branches:
   only:
     - master
 
-install: nuget install  NUnit.Console -OutputDirectory %SYSTEMDRIVE%\Tools\NUnit35
+install: 
+  - cmd: nuget install  NUnit.Console -OutputDirectory %SYSTEMDRIVE%\Tools\NUnit35
 set path=%SYSTEMDRIVE%\Tools\NUnit35\NUnit.ConsoleRunner.3.5.0\tools\;%path%
 mkdir %SYSTEMDRIVE%\Tools\NUnit35\NUnit.ConsoleRunner.3.5.0\tools\addins
 copy %SYSTEMDRIVE%\Tools\NUnit3\bin\addins %SYSTEMDRIVE%\Tools\NUnit35\NUnit.ConsoleRunner.3.5.0\tools\addins

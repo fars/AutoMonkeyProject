@@ -1,13 +1,12 @@
-language: csharp
-solution: ./Sources/AutoMonkey/AutoMonkey.sln
+language: c
+
 
 install:
-  - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
 
 script:
-  - xbuild /p:Configuration=Debug ./Sources/AutoMonkey/AutoMonkey.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AMCanUsbLibTest/bin/Debug/AMCanUsbLibTest.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AMLinLibTest/bin/Debug/AMLinLibTest.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AMLogEngineLibTest/bin/Debug/AMLogEngineLibTest.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AutoMonkeyTest/bin/Debug/AutoMonkeyTest.dll
+  - xbuild CI.proj
+  - nunit-console ./Sources/AutoMonkey/AMCanUsbLibTest/bin/Debug/AMCanUsbLibTest.dll -exclude Integration,NotWorkingOnMono
+  - nunit-console ./Sources/AutoMonkey/AMLinLibTest/bin/Debug/AMLinLibTest.dll -exclude Integration,NotWorkingOnMono
+  - nunit-console ./Sources/AutoMonkey/AMLogEngineLibTest/bin/Debug/AMLogEngineLibTest.dll -exclude Integration,NotWorkingOnMono
+  - nunit-console ./Sources/AutoMonkey/AutoMonkeyTest/bin/Debug/AutoMonkeyTest.dll -exclude Integration,NotWorkingOnMono

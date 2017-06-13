@@ -8,5 +8,9 @@ install:
   - sudo apt-get install nunit-console
 
 script:
- - dotnet restore
- - xbuild ./Sources/AutoMonkey/AutoMonkey.sln
+  - dotnet restore
+  - xbuild ./Sources/AutoMonkey/AutoMonkey.sln
+  - nunit-console ./Sources/AutoMonkey/AMCanUsbLibTest/bin/Debug/AMCanUsbLibTest.dll
+  - nunit-console ./Sources/AutoMonkey/AMLinLibTest/bin/Debug/AMLinLibTest.dll
+  - nunit-console ./Sources/AutoMonkey/AMLogEngineLibTest/bin/Debug/AMLogEngineLibTest.dll
+  - nunit-console ./Sources/AutoMonkey/AutoMonkeyTest/bin/Debug/AutoMonkeyTest.dll

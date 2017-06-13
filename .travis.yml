@@ -1,11 +1,9 @@
 language: csharp
 solution: ./Sources/AutoMonkey/AutoMonkey.sln
-mono: none
-dotnet: 1.0.3
-dist: trusty
 
 install:
-  - sudo apt-get install nunit-console
+  - sudo apt-get install xbuild nunit-console
+  - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
 
 script:
   - dotnet restore

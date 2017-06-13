@@ -7,7 +7,7 @@ branches:
     - master
 
 before_build:
-    - nuget restore src\CommandLineApplicationLauncher.sln
+    - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
 
 build:
   project: ./Sources/AutoMonkey/AutoMonkey.sln

@@ -2,13 +2,12 @@ language: csharp
 solution: ./Sources/AutoMonkey/AutoMonkey.sln
 
 install:
-  - sudo apt-get install nunit-console
   - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 
 script:
-  - dotnet restore
-  - xbuild ./Sources/AutoMonkey/AutoMonkey.sln
-  - nunit-console ./Sources/AutoMonkey/AMCanUsbLibTest/bin/Debug/AMCanUsbLibTest.dll
-  - nunit-console ./Sources/AutoMonkey/AMLinLibTest/bin/Debug/AMLinLibTest.dll
-  - nunit-console ./Sources/AutoMonkey/AMLogEngineLibTest/bin/Debug/AMLogEngineLibTest.dll
-  - nunit-console ./Sources/AutoMonkey/AutoMonkeyTest/bin/Debug/AutoMonkeyTest.dll
+  - xbuild /p:Configuration=Debug ./Sources/AutoMonkey/AutoMonkey.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AMCanUsbLibTest/bin/Debug/AMCanUsbLibTest.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AMLinLibTest/bin/Debug/AMLinLibTest.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AMLogEngineLibTest/bin/Debug/AMLogEngineLibTest.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Sources/AutoMonkey/AutoMonkeyTest/bin/Debug/AutoMonkeyTest.dll

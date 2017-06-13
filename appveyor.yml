@@ -15,8 +15,7 @@ build:
 
 # scripts to run before tests
 before_test:
-  - echo ========= Runing unut tests ===============
-  - ps: Write-Host "========= Runing unut tests ==============="
+  - echo ========= Runing unit tests ===============
 
 test:
   assemblies:
@@ -24,8 +23,8 @@ test:
 
 test_script:
 - cmd: >-
-    nunit-console ./Sources/AutoMonkey/AMCanUsbLibTest/bin/Debug/AMCanUsbLibTest.dll
-    nunit-console ./Sources/AutoMonkey/AMLinLibTest/bin/Debug/AMLinLibTest.dll
-    nunit-console ./Sources/AutoMonkey/AMLogEngineLibTest/bin/Debug/AMLogEngineLibTest.dll
-    nunit-console ./Sources/AutoMonkey/AutoMonkeyTest/bin/Debug/AutoMonkeyTest.dll
+    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AMCanUsbLibTest\bin\Debug\AMCanUsbLibTest.dll
+    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AMLinLibTest\bin\Debug\AMLinLibTest.dll
+    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AMLogEngineLibTest\bin\Debug\AMLogEngineLibTest.dll
+    nunit-console C:\projects\automonkeyproject\Sources\AutoMonkey\AutoMonkeyTest\bin\Debug\AutoMonkeyTest.dll
     

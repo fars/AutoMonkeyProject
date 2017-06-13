@@ -1,0 +1,17 @@
+version: 1.0.{build}
+
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
+
+configuration: Release
+platform: x64
+build:
+  project: ./Sources/AutoMonkey/AutoMonkey.sln
+  verbosity: minimal
+test:
+  assemblies: '**\*Test.dll'
+
+

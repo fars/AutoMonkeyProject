@@ -24,4 +24,4 @@ test:
       - '**\*Test.dll'
     
 test_script:
-- cmd: nunit3-console "C:\projects\automonkeyproject\Sources\AutoMonkey\AMCanUsbLibTest\bin\Debug\AMCanUsbLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AMLinLibTest\bin\Debug\AMLinLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AMLogEngineLibTest\bin\Debug\AMLogEngineLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AutoMonkeyTest\bin\Debug\AutoMonkeyTest.dll" /nologo /labels
+- cmd: nunit3-console "C:\projects\automonkeyproject\Sources\AutoMonkey\AMCanUsbLibTest\bin\Debug\AMCanUsbLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AMLinLibTest\bin\Debug\AMLinLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AMLogEngineLibTest\bin\Debug\AMLogEngineLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AutoMonkeyTest\bin\Debug\AutoMonkeyTest.dll" /nologo /labels /run:*

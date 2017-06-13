@@ -6,6 +6,9 @@ branches:
   only:
     - master
 
+before_build:
+    - nuget restore src\CommandLineApplicationLauncher.sln
+
 build:
   project: ./Sources/AutoMonkey/AutoMonkey.sln
   verbosity: minimal

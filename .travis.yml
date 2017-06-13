@@ -2,7 +2,7 @@ language: csharp
 solution: ./Sources/AutoMonkey/AutoMonkey.sln
 
 install:
-  - sudo apt-get install xbuild nunit-console
+  - sudo apt-get install nunit-console
   - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
 
 script:

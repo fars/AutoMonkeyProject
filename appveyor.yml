@@ -36,8 +36,3 @@ before_test: none
 
 # to run tests again only selected assemblies and/or categories
 test: none
-
-artifacts:
-  - path: '**\*.dll'
-    name: AutoMonkeyLib
-    type: zip

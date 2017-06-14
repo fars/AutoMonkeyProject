@@ -5,6 +5,17 @@ branches:
   only:
     - master
 
+skip_tags: true
+
+skip_commits:
+  message: /README.md edited online/
+ 
+cache:
+  - packages -> **\packages.config
+  - C:\downloads -> appveyor.yml
+
+ image: Visual Studio 2017
+  
 before_build:
     - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
 
@@ -16,12 +27,18 @@ build:
 before_test: none
 
 # to run tests again only selected assemblies and/or categories
-test: none
+#test: none
+
+test:
+  assemblies:
+    - '**\*Test.dll'
 
 #---------------------------------#
 #      artifacts configuration    #
 #---------------------------------#
 artifacts:
-  - path: ./Sources/AutoMonkey/AutoMonkey/bin/Debug
-    name: AutoMonkey.exe
+  - path: 
+     - '**\*.dll' 
+     - '**\*.exe' 
+    name: AutoMonkey
  

@@ -41,7 +41,3 @@ artifacts:
   - path: '**\*.dll'
     name: AutoMonkeyLib
     type: zip
- 
-  - path: '**\*.exe'
-    name: AutoMonkey
-    type: zip

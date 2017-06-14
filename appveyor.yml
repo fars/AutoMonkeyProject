@@ -1,8 +1,7 @@
-version: 1.0.{build}
+version: 0.0.{build}
 
 # branches to build
 branches:
-  # whitelist
   only:
     - master
 
@@ -14,14 +13,7 @@ build:
   verbosity: minimal
 
 # scripts to run before tests
-before_test:
-  - echo ========= Runing unit tests ===============
+before_test: none
 
 # to run tests again only selected assemblies and/or categories
-test:
-  assemblies:
-    only:
-      - '**\*Test.dll'
-    
-test_script:
-- cmd: nunit3-console "C:\projects\automonkeyproject\Sources\AutoMonkey\AMCanUsbLibTest\bin\Debug\AMCanUsbLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AMLinLibTest\bin\Debug\AMLinLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AMLogEngineLibTest\bin\Debug\AMLogEngineLibTest.dll" "C:\projects\automonkeyproject\Sources\AutoMonkey\AutoMonkeyTest\bin\Debug\AutoMonkeyTest.dll" /nologo /labels /run:*
+test: none

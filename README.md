@@ -1,5 +1,5 @@
 # AutoMonkey
 
-Automotive manual test scrip ctrator and runner with LIN and CAN i-faces 
+Automotive manual test script creator and runner with LIN and CAN i-faces monitors.
 
 

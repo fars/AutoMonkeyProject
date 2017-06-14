@@ -34,11 +34,11 @@ test:
 
 artifacts:
   - path: '**\*Lib\bin\*\AM*Lib.dll'
-    name: AutoMonkeyLib
+    name: AutoMonkey
     type: zip
     
   - path: '**\*Logger\bin\*\*Logger.dll'
-    name: AutoMonkeyLib
+    name: AutoMonkey
     type: zip
   
   - path: '**\AutoMonkey\bin\*\AutoMonkey.exe'

@@ -5,7 +5,7 @@ assembly_info:
   file: '**\AssemblyInfo.*'
   assembly_version: '{version}'
   assembly_file_version: '{version}'
-  assembly_informational_version: '{version}
+  assembly_informational_version: '{version}'
 
 # branches to build
 branches:
@@ -35,4 +35,23 @@ build:
 before_test: none
 
 # to run tests again only selected assemblies and/or categories
-test: none
+#test: none
+
+test:
+  assemblies:
+    - '**\*Test.dll'
+
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+artifacts:
+  - path: '**\*.dll'
+  name: AutoMonkeyLib
+  type: zip
+  
+  - path: '**\*.exe'
+  name: AutoMonkeyLib
+  type: zip
+
+  
+ 

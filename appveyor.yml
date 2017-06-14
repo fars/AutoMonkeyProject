@@ -17,10 +17,6 @@ skip_tags: true
 skip_commits:
   message: /README.md edited online/
  
-cache:
-  - packages -> **\packages.config
-  - C:\downloads -> appveyor.yml
-
 image: 
   - Visual Studio 2017
   

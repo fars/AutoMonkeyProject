@@ -37,17 +37,11 @@ before_test: none
 # to run tests again only selected assemblies and/or categories
 test: none
 
-#---------------------------------#
-#      artifacts configuration    #
-#---------------------------------#
 artifacts:
   - path: '**\*.dll'
-  name: AutoMonkeyLib
-  type: zip
-  
-  - path: '**\*.exe'
-  name: AutoMonkeyLib
-  type: zip
-
-  
+    name: AutoMonkeyLib
+    type: zip
  
+  - path: '**\*.exe'
+    name: AutoMonkey
+    type: zip

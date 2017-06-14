@@ -17,3 +17,11 @@ before_test: none
 
 # to run tests again only selected assemblies and/or categories
 test: none
+
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+artifacts:
+  - path: ./Sources/AutoMonkey/AutoMonkey/bin/Debug
+    name: AutoMonkey.exe
+ 

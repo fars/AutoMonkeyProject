@@ -45,6 +45,6 @@ test:
 #      artifacts configuration    #
 #---------------------------------#
 artifacts:
-  - path: '**\*.dll' '**\*.exe' 
-    name: AutoMonkey
+  - path: '**\AM*.dll' 
+  - path: '**\*.exe' 
  

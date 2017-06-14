@@ -37,10 +37,6 @@ before_test: none
 # to run tests again only selected assemblies and/or categories
 test: none
 
-#test:
-#  assemblies:
-#    - '**\*Test.dll'
-
 #---------------------------------#
 #      artifacts configuration    #
 #---------------------------------#

@@ -37,7 +37,7 @@ artifacts:
     name: AutoMonkeyLib
     type: zip
     
-  - path: '**\*Logger\bin\*\AM*Lib.dll'
+  - path: '**\bin\*\**Logger.dll'
     name: AutoMonkeyLib
     type: zip
   

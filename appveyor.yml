@@ -35,11 +35,11 @@ test:
 #      artifacts configuration    #
 #---------------------------------#
 artifacts:
-  - path: '**\AM*.dll'
+  - path: '**\bin\*\AM*Lib.dll'
     name: AutoMonkeyLib
     type: zip
   
-  - path: '**\AutoMonkey.exe'
+  - path: '**\bin\*\AutoMonkey.exe'
     name: AutoMonkeyLib
     type: zip
 

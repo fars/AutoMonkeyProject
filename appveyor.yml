@@ -1,5 +1,12 @@
 version: 0.0.{build}
 
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}
+
 # branches to build
 branches:
   only:
@@ -38,8 +45,6 @@ test:
 #      artifacts configuration    #
 #---------------------------------#
 artifacts:
-  - path: 
-     - '**\*.dll' 
-     - '**\*.exe' 
+  - path: '**\*.dll **\*.exe' 
     name: AutoMonkey
  

@@ -7,7 +7,6 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 
-# branches to build
 branches:
   only:
     - master
@@ -23,6 +22,8 @@ image:
 before_build:
     - nuget restore ./Sources/AutoMonkey/AutoMonkey.sln
 
+configuration: Debug
+    
 build:
   project: ./Sources/AutoMonkey/AutoMonkey.sln
   verbosity: minimal
@@ -31,16 +32,17 @@ test:
   assemblies:
     - '**\*Test.dll'
 
-#---------------------------------#
-#      artifacts configuration    #
-#---------------------------------#
 artifacts:
   - path: '**\*Lib\bin\*\AM*Lib.dll'
     name: AutoMonkeyLib
     type: zip
+    
+  - path: '**\*Logger\bin\*\AM*Lib.dll'
+    name: AutoMonkeyLib
+    type: zip
   
   - path: '**\AutoMonkey\bin\*\AutoMonkey.exe'
-    name: AutoMonkeyLib
+    name: AutoMonkey
     type: zip
 
   

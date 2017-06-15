@@ -12,14 +12,14 @@ Better Code Hub
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/fars/AutoMonkeyProject?branch=master)](https://bettercodehub.com/)
 
-Code Climate Badge
+Code Climate
 
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/fars/AutoMonkeyProject)
+[![Code Climate](https://codeclimate.com/github/fars/AutoMonkeyProject/badges/gpa.svg)](https://codeclimate.com/github/fars/AutoMonkeyProject)
 
-Test Coverage Badge
+Test Coverage
 
-[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/fars/AutoMonkeyProject)
+[![Test Coverage](https://codeclimate.com/github/fars/AutoMonkeyProject/badges/coverage.svg)](https://codeclimate.com/github/fars/AutoMonkeyProject)
 
-Issue Count Badge
+Issue Count
 
-[![Issue Count](https://codeclimate.com/github/codeclimate/codeclimate/badges/issue_count.svg)](https://codeclimate.com/github/fars/AutoMonkeyProject)
+[![Issue Count](https://codeclimate.com/github/fars/AutoMonkeyProject/badges/issue_count.svg)](https://codeclimate.com/github/fars/AutoMonkeyProject)
